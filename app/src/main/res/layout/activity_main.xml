@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context="link.k3n.lockable_bottom_sheet_behavior_sample.MainActivity.MainActivity">
+
+  <android.support.design.widget.CoordinatorLayout
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--TODO: BottomSheetBehaviorのpeekHeight分だけ高さを縮める-->
+    <RelativeLayout
+      android:id="@+id/contents_root_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Hello World!"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+      android:id="@+id/bottom_sheet_behavior_root_layout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#FFFFFFFF"
+      app:layout_behavior="link.k3n.lockable_bottom_sheet_behavior_sample.LockableBottomSheetBehavior"
+      app:behavior_peekHeight="50dp"
+      app:behavior_hideable="false">
+
+      <LinearLayout
+        android:id="@+id/bottom_sheet_behavior_bar_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+          android:id="@+id/bottom_sheet_behavior_toggle_button"
+          android:layout_width="24dp"
+          android:layout_height="24dp"
+          android:layout_marginStart="8dp"
+          android:layout_gravity="center_vertical"
+          android:background="@mipmap/ic_launcher"
+          android:clickable="true"
+          android:focusable="true"
+          tools:ignore="ContentDescription"/>
+
+        <TextView
+          android:id="@+id/bottom_sheet_behavior_status_text"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:textColor="#4c4c4c"
+          android:textSize="28sp"
+          android:gravity="center"
+          android:text="Collapse"/>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/bottom_sheet_behavior_contents_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bottom_sheet_behavior_bar_root_layout"
+        android:layout_above="@id/bottom_sheet_behavior_edit_text_root_layout"
+        android:orientation="vertical">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:textSize="14sp"
+          android:textColor="#808080"
+          android:text="Hello World!"/>
+
+      </LinearLayout>
+
+      <FrameLayout
+        android:id="@+id/bottom_sheet_behavior_edit_text_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+          android:id="@+id/bottom_sheet_behavior_edit_text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingEnd="40dp"
+          android:textSize="14sp"
+          android:textColor="#4c4c4c"
+          android:textColorHint="#808080"
+          android:maxLines="3"
+          android:inputType="textMultiLine"
+          android:hint="Input text here!"
+          tools:ignore="LabelFor"/>
+
+        <ImageButton
+          android:id="@+id/bottom_sheet_behavior_clear_button"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_gravity="center_vertical|end"
+          android:layout_marginEnd="35dp"
+          android:background="@mipmap/ic_launcher_round"
+          android:foreground="?android:selectableItemBackgroundBorderless"
+          tools:ignore="ContentDescription"/>
+
+        <ImageButton
+          android:id="@+id/bottom_sheet_behavior_send_button"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:layout_gravity="center_vertical|end"
+          android:layout_marginEnd="5dp"
+          android:background="@mipmap/ic_launcher_round"
+          android:foreground="?android:selectableItemBackgroundBorderless"
+          tools:ignore="ContentDescription"/>
+
+      </FrameLayout>
+
+    </RelativeLayout>
+
+  </android.support.design.widget.CoordinatorLayout>
+
+</layout>
