@@ -10,7 +10,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--TODO: BottomSheetBehaviorのpeekHeight分だけ高さを縮める-->
+    <!--region Main contents-->
+
     <RelativeLayout
       android:id="@+id/contents_root_layout"
       android:layout_width="match_parent"
@@ -24,6 +25,10 @@
 
     </RelativeLayout>
 
+    <!--endregion-->
+
+    <!--region BottomSheetBehavior-->
+
     <RelativeLayout
       android:id="@+id/bottom_sheet_behavior_root_layout"
       android:layout_width="match_parent"
@@ -32,6 +37,8 @@
       app:layout_behavior="link.k3n.lockable_bottom_sheet_behavior_sample.LockableBottomSheetBehavior"
       app:behavior_peekHeight="50dp"
       app:behavior_hideable="false">
+
+      <!--region BottomSheetBehavior Bar-->
 
       <LinearLayout
         android:id="@+id/bottom_sheet_behavior_bar_root_layout"
@@ -62,6 +69,10 @@
 
       </LinearLayout>
 
+      <!--endregion-->
+
+      <!--region BottomSheetBehavior contents-->
+
       <LinearLayout
         android:id="@+id/bottom_sheet_behavior_contents_root_layout"
         android:layout_width="match_parent"
@@ -79,6 +90,10 @@
           android:text="Hello World!"/>
 
       </LinearLayout>
+
+      <!--endregion-->
+
+      <!--region BottomSheetBehavior bottom EditText-->
 
       <FrameLayout
         android:id="@+id/bottom_sheet_behavior_edit_text_root_layout"
@@ -121,7 +136,11 @@
 
       </FrameLayout>
 
+      <!--endregion-->
+
     </RelativeLayout>
+
+    <!--endregion-->
 
   </android.support.design.widget.CoordinatorLayout>
 
