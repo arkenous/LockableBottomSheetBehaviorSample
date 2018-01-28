@@ -15,7 +15,8 @@
     <RelativeLayout
       android:id="@+id/contents_root_layout"
       android:layout_width="match_parent"
-      android:layout_height="match_parent">
+      android:layout_height="match_parent"
+      android:layout_marginBottom="50dp">
 
       <TextView
         android:layout_width="match_parent"
@@ -79,7 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bottom_sheet_behavior_bar_root_layout"
         android:layout_above="@id/bottom_sheet_behavior_edit_text_root_layout"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@android:color/darker_gray">
 
         <TextView
           android:layout_width="match_parent"
