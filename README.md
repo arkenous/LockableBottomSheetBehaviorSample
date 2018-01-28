@@ -1,3 +1,5 @@
 # LockableBottomSheetBehaviorSample
 
 ドラッグ操作等によるBottomSheetBehavior SheetのExpand・Collapseを無効にし、ボタン操作のみによってのみこれらを可能にしたサンプルプログラム。
+
+![LockableBottomSheetBehaviorSample](https://github.com/k3nsuk3/LockableBottomSheetBehaviorSample/blob/master/LockableBottomSheetBehaviorSample.gif)
